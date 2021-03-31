@@ -54,7 +54,7 @@ fn nth_prime_num(n: u16) -> u16 {
         counter += 1
     }
     println!("The {}th prime number is {}", n, nums[nums.len() - 1]);
-    return nums[nums.len() - 1];
+    nums[nums.len() - 1]
 }
 
 #[cfg(test)]
@@ -104,27 +104,3 @@ mod tests {
         assert_eq!(nth_prime_num(20), 71);
     }
 }
-
-// [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
-// [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
-
-// let mut ref_num: u8 = 2;
-
-// while ref_num < n {
-// println!("{:?}", nums);
-// for number in nums.iter() {
-//     if number > &ref_num && number % ref_num != 0 {
-
-//         nums.remove_item(|&num| num > ref_num);
-//         println!("{}", number);
-//     }
-// }
-// nums.retain(|&num| num % 2 != 0 );
-// nums.push(2);
-// nums.sort();
-// nums.retain(|&num| num / 3 == 1);
-// nums.retain(|&num| num % 3 != 1);
-// ref_num += 1;
-// }
-
-// println!("{}", u16::MAX);
